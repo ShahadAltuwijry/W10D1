@@ -29,12 +29,13 @@ const Posts = ({ posts }) => {
       {posts.map((post) => {
         return (
           <div
+            style={{ cursor: "pointer" }}
             onClick={() => move(post.id)}
             key={post.id}
             style={{ borderBottom: "1px solid black" }}
           >
-            <h2> - {post.title}</h2>
-            <p>{post.body}</p>
+            <h2 style={{ cursor: "pointer" }}> - {post.title}</h2>
+            <p style={{ cursor: "pointer" }}>{post.body}</p>
           </div>
         );
       })}

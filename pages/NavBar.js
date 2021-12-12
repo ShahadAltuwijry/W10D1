@@ -7,16 +7,22 @@ const NavBar = () => {
     <>
       <ul className={styles.navBar}>
         <Link href="/" passHref>
-          <Image alt="logo" src="/logo-copy.png" width={70} height={50} />
+          <Image
+            style={{ cursor: "pointer" }}
+            alt="logo"
+            src="/logo-copy.png"
+            width={70}
+            height={50}
+          />
         </Link>
         <Link href="/About">
-          <li>About</li>
+          <li style={{ cursor: "pointer" }}>About</li>
         </Link>
         <Link href="/Contact">
-          <li>Contact</li>
+          <li style={{ cursor: "pointer" }}>Contact</li>
         </Link>
         <Link href="/Posts">
-          <li>Posts</li>
+          <li style={{ cursor: "pointer" }}>Posts</li>
         </Link>
       </ul>
 
