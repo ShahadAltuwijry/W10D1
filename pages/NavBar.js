@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <>
       <ul className={styles.navBar}>
-        <Link href="/">
+        <Link href="/" passHref>
           <Image alt="logo" src="/logo-copy.png" width={70} height={50} />
         </Link>
         <Link href="/About">
