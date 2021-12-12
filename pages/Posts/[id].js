@@ -30,9 +30,9 @@ export async function getStaticProps({ params }) {
 function Post({ post }) {
   return (
     <>
-      <div style={{ margin: "15px" }}>
+      <div>
         <h1>post Details</h1>
-        <div key={post.id} style={{ borderBottom: "1px solid black" }}>
+        <div key={post.id}>
           <h2> - {post.title}</h2>
           <p>{post.body}</p>
         </div>
