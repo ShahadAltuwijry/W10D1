@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const posts = await res.json();
 
-console.log(posts);
+  console.log(posts);
 
   if (!posts) {
     return {
@@ -36,15 +37,12 @@ const Posts = ({ posts }) => {
       <hr />
       {posts.map((post) => {
         return (
-          <div
-            style={{ cursor: "pointer" }}
-            onClick={() => move(post.id)}
-            key={post.id}
-            style={{ borderBottom: "1px solid black" }}
-          >
-            <h2 style={{ cursor: "pointer" }}> - {post.title}</h2>
-            <p style={{ cursor: "pointer" }}>{post.body}</p>
-          </div>
+          <Link href={`/Posts/${post.id}`} key={post.id}>
+            <div>
+              <h2> - {post.title}</h2>
+              <p>{post.body}</p>
+            </div>
+          </Link>
         );
       })}
     </div>
